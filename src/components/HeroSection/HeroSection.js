@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import heroImg from '../../assets/images/hero.png';
+import heroImg from '../../assets/images/hero2.jpg';
 import Button from '../Button/Button';
 import PText from './PText';
 import socialMedia from '../../assets/images/social-media-arrow.svg';
@@ -32,14 +32,24 @@ const HeroStyle = styled.div`
     }
   }
   .hero-img {
-    max-width: 900px;
+    max-width: 800px;
     width: 100%;
-    height: 600px;
+    height: 500px;
     margin: 0 auto;
     border: 2px solid var(--gray-1);
+    
+    
   }
   .hero-info {
-    margin-top: -18rem;
+    margin-top: -16rem;
+    
+    
+  }
+    
+  p{
+    color: var(--white);
+  }
+  
   }
   .social-info,
   .scroll-icon {
@@ -107,6 +117,7 @@ const HeroStyle = styled.div`
     }
     .hero-info {
       margin-top: 3rem;
+      
     }
     .social-info {
       left: 0px;
@@ -143,63 +154,53 @@ const HeroStyle = styled.div`
   }
 `;
 
-const HeroSection = () => {
-  console.log();
-  return (
-    <HeroStyle>
-      <div className="hero">
-        <div className="container">
-          <h1 className="hero-heading">
-            <span>Hello, This is </span>
-            <span className="hero-name">Noor Hossain</span>
-          </h1>
-          <div className="hero-img">
-            <img src={heroImg} alt="" />
-          </div>
-          <div className="hero-info">
+const HeroSection = () => (
+  <HeroStyle>
+    <div className="hero">
+      <div className="container">
+        <h1 className="hero-heading">
+          <span>Hello, This is </span>
+          <span className="hero-name">Noor Hossain</span>
+        </h1>
+        <div className="hero-img">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="hero-info">
+          <div className="hero-para">
             <PText>
-              I am working as a freelance web designer and developer for 4
-              years. I love to design and make new web experiences for the
-              people.
+              <p>
+                I am working as a web designer and developer for 1 year. I love
+                to design and make new web experiences for the people.
+              </p>
             </PText>
-            <Button
-              btnLink="/projects"
-              btnText="see my works"
-              outline="false"
-            />
           </div>
-          <div className="social-info">
-            <div className="social-info-indicator">
-              <p>Follow</p>
-              <img src={socialMedia} alt="social-media-arrow" />
-            </div>
-            <div className="social-media">
-              <ul>
-                <li>
-                  <a href="" target="_blank" rel="noreffer">
-                    FB
-                  </a>
-                </li>
-                <li>
-                  <a href="" target="_blank" rel="noreffer">
-                    TW
-                  </a>
-                </li>
-                <li>
-                  <a href="" target="_blank" rel="noreffer">
-                    LI
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <Button btnLink="/projects" btnText="see my works" outline="false" />
+        </div>
+        <div className="social-info">
+          <div className="social-info-indicator">
+            <p>Follow</p>
+            <img src={socialMedia} alt="social-media-arrow" />
           </div>
-          <div className="scroll-icon">
-            <p>scroll</p>
-            <img src={scrollDown} alt="" />
+          <div className="social-media">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/">FB</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/home">TW</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/feed/">LI</a>
+              </li>
+            </ul>
           </div>
         </div>
+        <div className="scroll-icon">
+          <p>scroll</p>
+          <img src={scrollDown} alt="" />
+        </div>
       </div>
-    </HeroStyle>
-  );
-};
+    </div>
+  </HeroStyle>
+);
 export default HeroSection;

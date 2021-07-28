@@ -82,9 +82,9 @@ const AboutSection = () => (
           heading="About Me"
         />
         <PText>
-          I am a freelance website designer and developer from Chittagong,
-          Bangladesh. I create professional websites. I love art and always try
-          to show unique views to the audience through my design.
+          I am a website designer and developer from Chittagong, Bangladesh. I
+          create professional websites. I love art and always try to show unique
+          views to the audience through my design.
         </PText>
         <div className="aboutSection-buttons">
           <Button btnLink="/projects" btnText="works" outline />

@@ -5,6 +5,7 @@ const PStyles = styled.div`
   max-width: 500px;
   font-size: 1.8rem;
   line-height: 1.1em;
+
   margin: 0 auto;
   @media only screen and (max-width: 768px) {
     font-size: 1.4rem;

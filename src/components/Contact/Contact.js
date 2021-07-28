@@ -1,8 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+import ContactSection from '../ContactSection/ContactSection';
+import Map from '../Map/Map';
 
 const Contact = () => (
   <div>
-    <h1>This is contact pages</h1>
+    <div className="container">
+      <ContactSection />
+      <Map />
+    </div>
   </div>
 );
 
