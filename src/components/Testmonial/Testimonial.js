@@ -100,11 +100,22 @@ const Testimonial = () => {
   return (
     <TestimonialStyles>
       <div className="container">
-        <SectionTitle
-          subheading="see what our clients about us"
-          heading="Testimonial"
-        />
-        <div className="testimonial-wrapper">
+        <div
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-duration="1000"
+        >
+          <SectionTitle
+            subheading="see what our clients about us"
+            heading="Testimonial"
+          />
+        </div>
+        <div
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-duration="1000"
+          className="testimonial-wrapper"
+        >
           <SwitchTransition component={null}>
             <CSSTransition
               key={activeSlides.id}

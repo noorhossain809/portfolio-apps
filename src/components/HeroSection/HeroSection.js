@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import AOS from 'aos';
 import heroImg from '../../assets/images/hero2.jpg';
 import Button from '../Button/Button';
 import PText from './PText';
 import socialMedia from '../../assets/images/social-media-arrow.svg';
 import scrollDown from '../../assets/images/scroll-down-arrow.svg';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 const HeroStyle = styled.div`
   .hero {
@@ -21,6 +25,7 @@ const HeroStyle = styled.div`
     font-size: 2rem;
     margin-bottom: -4rem;
     position: relative;
+    
     span {
       display: inline-block;
       width: 100%;
@@ -29,21 +34,67 @@ const HeroStyle = styled.div`
       font-size: 7rem;
       font-family: 'Montserrat SemiBold';
       color: var(--white);
+      
     }
   }
+  .head{
+    /* animation: moveheading 1.5s linear 1;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards; */
+  }
+  /* @keyframes moveheading {
+    from {
+      transform: translateX(-700px);
+      visibility: visible;
+    }
+    to {
+      transform: translateX(4);
+      visibility: visible;
+    }
+  } */
   .hero-img {
     max-width: 800px;
     width: 100%;
     height: 500px;
     margin: 0 auto;
+  
     border: 2px solid var(--gray-1);
-    
+    /* animation: movezoom 1.5s linear 1;
+    animation-delay: 4s;
+    visibility: hidden;
+    animation-fill-mode: forwards; */
     
   }
+  /* @keyframes movezoom {
+    from {
+      transform: scale(0);
+      visibility: visible;
+    }
+    to{
+      transform: scale(1);
+      visibility: visible;
+      
+    }
+  } */
   .hero-info {
     margin-top: -16rem;
+    animation: moveinfo 1.5s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
     
-    
+  }
+  @keyframes moveinfo {
+    from {
+      transform: translateX(700px);
+      visibility: visible;
+    }
+    to{
+      transform: translateX(0);
+      visibility: visible;
+      
+    }
   }
     
   p{
@@ -62,10 +113,41 @@ const HeroStyle = styled.div`
   }
   .social-info {
     left: 50px;
+    /* animation: movesocial 1.5s linear 1;
+    animation-delay: 6s;
+    visibility: hidden;
+    animation-fill-mode: forwards; */
   }
+  /* @keyframes movesocial {
+    from {
+      transform: translateY(-700px);
+      visibility: visible;
+    }
+    to{
+      transform: translateY(0);
+      visibility: visible;
+      
+    }
+  } */
   .scroll-icon {
     right: 50px;
+    /* animation: movescrool 1.5s linear 1;
+    animation-delay: 6s;
+    visibility: hidden;
+    animation-fill-mode: forwards; */
   }
+  
+  /* @keyframes movescrool {
+    from {
+      transform: translateX(700px);
+      visibility: visible;
+    }
+    to{
+      transform: translateX(0);
+      visibility: visible;
+      
+    }
+  } */
   .social-info-indicator,
   .scroll-icon {
     width: 50px;
@@ -158,11 +240,23 @@ const HeroSection = () => (
   <HeroStyle>
     <div className="hero">
       <div className="container">
-        <h1 className="hero-heading">
-          <span>Hello, This is </span>
-          <span className="hero-name">Noor Hossain</span>
-        </h1>
-        <div className="hero-img">
+        <div
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-duration="1000"
+          className="head"
+        >
+          <h1 className="hero-heading">
+            <span>Hello, This is </span>
+            <span className="hero-name">Noor Hossain</span>
+          </h1>
+        </div>
+        <div
+          data-aos="zoom-in-down"
+          data-aos-offset="200"
+          data-aos-duration="1000"
+          className="hero-img"
+        >
           <img src={heroImg} alt="" />
         </div>
         <div className="hero-info">
@@ -174,9 +268,18 @@ const HeroSection = () => (
               </p>
             </PText>
           </div>
-          <Button btnLink="/projects" btnText="see my works" outline="false" />
+          <Button
+            btnLink="/projects"
+            btnText="Download Resume"
+            outline="true"
+          />
         </div>
-        <div className="social-info">
+        <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-duration="1000"
+          className="social-info"
+        >
           <div className="social-info-indicator">
             <p>Follow</p>
             <img src={socialMedia} alt="social-media-arrow" />
@@ -195,7 +298,12 @@ const HeroSection = () => (
             </ul>
           </div>
         </div>
-        <div className="scroll-icon">
+        <div
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-duration="1000"
+          className="scroll-icon"
+        >
           <p>scroll</p>
           <img src={scrollDown} alt="" />
         </div>

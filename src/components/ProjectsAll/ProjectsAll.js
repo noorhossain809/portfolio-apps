@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import projectImg from '../../assets/images/projectImg.png';
 
 const ProjectItemStyles = styled.div`
@@ -30,6 +32,7 @@ const ProjectItemStyles = styled.div`
     font-family: 'RobotoMono Regular';
     margin-top: 1rem;
   }
+
   @media only screen and (max-width: 768px) {
     .projectsAll-item {
       height: 350px;
@@ -41,6 +44,8 @@ const ProjectsAll = ({
   img = projectImg,
   title = 'Project title',
   description = 'Lorem Ipsum is simply dummy text of the printing and typesettingindustry.',
+  link = 'GitHub',
+  preview = 'https://doctors-portal-c5857.web.app/',
 }) => (
   <ProjectItemStyles>
     <Link to="/projects" className="projectsAll-item">
@@ -51,6 +56,7 @@ const ProjectsAll = ({
         <h3 className="project-title">{title}</h3>
       </Link>
       <p className="projectItem-desc">{description}</p>
+      <Link to="">{preview}</Link>
     </div>
   </ProjectItemStyles>
 );

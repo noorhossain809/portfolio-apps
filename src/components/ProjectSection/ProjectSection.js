@@ -1,7 +1,10 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import SectionTitle from '../AboutSection/SectionTitle';
 import projects from '../../assets/data/projects';
 import ProjectsAll from '../ProjectsAll/ProjectsAll';
@@ -41,6 +44,25 @@ const ProjectSectionStyles = styled.div`
   .swiper-button-next::after {
     font-size: 2rem;
   }
+  .font-icons {
+    font-size: 3.4rem;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .font-icons a {
+    padding: 5px;
+  }
+  .font-icons button {
+    background-color: var(--black);
+    border: 2px solid var(--gray-1);
+    padding: 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: var(--deep-dark);
+  }
   @media only screen and (max-width: 768px) {
     .projects-all-items {
       flex-direction: column;
@@ -55,11 +77,18 @@ const ProjectSectionStyles = styled.div`
 const ProjectSection = () => (
   <ProjectSectionStyles>
     <div className="container">
-      <SectionTitle
-        subheading="some of my recent projects"
-        heading="Projects"
-      />
-      <div className="projects-all-items">
+      <div data-aos="fade-down" data-aos-offset="200" data-aos-duration="1000">
+        <SectionTitle
+          subheading="some of my recent projects"
+          heading="Projects"
+        />
+      </div>
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-duration="1000"
+        className="projects-all-items"
+      >
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
@@ -84,7 +113,19 @@ const ProjectSection = () => (
                   img={project.img}
                   title={project.name}
                   description={project.desc}
+                  link={project.link}
                 />
+                <div className="font-icons">
+                  <Link to={project.preview}>
+                    <button type="button">preview</button>
+                  </Link>
+                  <a href="https://github.com/noorhossain809/doctors-portal">
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                  <a href="https://www.linkedin.com/feed/">
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                </div>
               </SwiperSlide>
             );
           })}

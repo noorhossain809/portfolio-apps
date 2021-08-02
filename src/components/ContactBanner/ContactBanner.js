@@ -24,7 +24,12 @@ const ContactStyles = styled.div`
 
 const ContactBanner = () => (
   <ContactStyles>
-    <div className="container">
+    <div
+      data-aos="flip-left"
+      data-aos-offset="200"
+      data-aos-duration="1000"
+      className="container"
+    >
       <div className="contact-wrapper">
         <PText>Have a project in mind</PText>
         <h3 className="contact-heading">Let me help you</h3>

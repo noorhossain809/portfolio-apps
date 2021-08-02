@@ -18,6 +18,38 @@ const AboutSectionStyle = styled.div`
   .section-right {
     flex: 1;
   }
+  .section-left {
+    /* animation: moveleft 1s linear 1;
+    animation-delay: 7s;
+    visibility: hidden;
+    animation-fill-mode: forwards; */
+  }
+  /* @keyframes moveleft {
+    from {
+      transform: translateX(-100px);
+      visibility: visible;
+    }
+    to {
+      transform: translateX(0);
+      visibility: visible;
+    }
+  } */
+  .section-right {
+    /* animation: moveright 1s linear 1;
+    animation-delay: 7s;
+    visibility: hidden;
+    animation-fill-mode: forwards; */
+  }
+  /* @keyframes moveright {
+    from {
+      transform: translateX(100px);
+      visibility: visible;
+    }
+    to {
+      transform: translateX(0);
+      visibility: visible;
+    }
+  } */
   .section-title {
     text-align: left;
   }
@@ -75,7 +107,12 @@ const AboutSectionStyle = styled.div`
 const AboutSection = () => (
   <AboutSectionStyle>
     <div className="container">
-      <div className="section-left">
+      <div
+        data-aos="fade-up-right"
+        data-aos-offset="200"
+        data-aos-duration="1000"
+        className="section-left"
+      >
         <SectionTitle
           className="section-title"
           subheading="Let me introduce myself"
@@ -91,7 +128,12 @@ const AboutSection = () => (
           <Button btnLink="/about" btnText="Read More" />
         </div>
       </div>
-      <div className="section-right">
+      <div
+        data-aos="zoom-in-down"
+        data-aos-offset="200"
+        data-aos-duration="1000"
+        className="section-right"
+      >
         <img src={aboutImg} alt="" />
       </div>
     </div>

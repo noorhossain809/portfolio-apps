@@ -37,6 +37,22 @@ const NavMenuStyles = styled.div`
       color: var(--white);
     }
   }
+  .hide-item {
+    /* animation: movedown 1.5s linear 1;
+    animation-delay: 0.5s;
+    visibility: hidden;
+    animation-fill-mode: forwards; */
+  }
+  /* @keyframes movedown {
+    0% {
+      transform: translateY(-100px);
+      visibility: visible;
+    }
+    100% {
+      transform: translateY(0);
+      visibility: visible;
+    }
+  } */
   .mobile-menu-icon {
     position: absolute;
     right: 1rem;
@@ -56,6 +72,20 @@ const NavMenuStyles = styled.div`
     padding: 0;
     .hide-item {
       transform: translateY(calc(-100% - var(--top)));
+      animation: moveup 1.5s;
+      animation-delay: 1s;
+      visibility: visible;
+      animation-fill-mode: forwards;
+    }
+    @keyframes moveup {
+      0% {
+        transform: translateY(-100px);
+        visibility: hidden;
+      }
+      100% {
+        transform: translateY(0);
+        visibility: hidden;
+      }
     }
     .mobile-menu-icon {
       display: block;
@@ -112,51 +142,52 @@ const NavMenu = () => {
         >
           <MdClose />
         </div>
-
-        <li>
-          <NavLink
-            to="/"
-            onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/projects"
-            onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-            Projects
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-            Contact
-          </NavLink>
-        </li>
+        <div data-aos="fade-down">
+          <li>
+            <NavLink
+              to="/"
+              onClick={() => setShowNav(!showNav)}
+              role="button"
+              onKeyDown={() => setShowNav(!showNav)}
+              tabIndex={0}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              onClick={() => setShowNav(!showNav)}
+              role="button"
+              onKeyDown={() => setShowNav(!showNav)}
+              tabIndex={0}
+            >
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/projects"
+              onClick={() => setShowNav(!showNav)}
+              role="button"
+              onKeyDown={() => setShowNav(!showNav)}
+              tabIndex={0}
+            >
+              Projects
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              onClick={() => setShowNav(!showNav)}
+              role="button"
+              onKeyDown={() => setShowNav(!showNav)}
+              tabIndex={0}
+            >
+              Contact
+            </NavLink>
+          </li>
+        </div>
       </ul>
     </NavMenuStyles>
   );
