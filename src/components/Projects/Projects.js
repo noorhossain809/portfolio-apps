@@ -89,6 +89,7 @@ const Projects = () => {
               title={item.name}
               description={item.desc}
               img={item.img}
+              preview={item.preview}
             />
           ))}
         </div>

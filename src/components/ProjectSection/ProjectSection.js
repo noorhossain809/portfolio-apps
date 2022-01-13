@@ -73,7 +73,7 @@ const ProjectSectionStyles = styled.div`
     }
   }
 `;
-
+console.log(projects);
 const ProjectSection = () => (
   <ProjectSectionStyles>
     <div className="container">
@@ -115,11 +115,14 @@ const ProjectSection = () => (
                   description={project.desc}
                   link={project.link}
                 />
-                <div className="font-icons">
-                  <Link to={project.preview}>
+                <div className="font-icons p-3">
+                  {/* <Link to={project.preview}>
                     <button type="button">preview</button>
-                  </Link>
-                  <a href="https://github.com/noorhossain809/doctors-portal">
+                  </Link> */}
+                  <button type="button">
+                    <a href={project.preview}>preview</a>
+                  </button>
+                  <a href={project.link}>
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
                   <a href="https://www.linkedin.com/feed/">

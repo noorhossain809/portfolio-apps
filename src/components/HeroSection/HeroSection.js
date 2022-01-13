@@ -268,11 +268,34 @@ const HeroSection = () => (
               </p>
             </PText>
           </div>
-          <Button
-            btnLink="/projects"
+          {/* <Button
+            btnLink="https://drive.google.com/file/d/1svBOC0OCde7mHFcjNAYvtcJUpnpN4lGp/view"
             btnText="Download Resume"
             outline="true"
-          />
+          /> */}
+
+          {/* <Button outline="true" btnText="Download Resume">
+            <a href="https://drive.google.com/file/d/1svBOC0OCde7mHFcjNAYvtcJUpnpN4lGp/view">
+              Download Resume
+            </a>
+          </Button> */}
+          <a href="https://drive.google.com/file/d/1svBOC0OCde7mHFcjNAYvtcJUpnpN4lGp/view">
+            <button
+              style={{
+                borderRadius: '5px',
+                padding: '15px',
+                margin: '10px',
+                cursor: 'pointer',
+                color: 'black',
+                border: 'none',
+                width: '250px',
+              }}
+              type="button"
+              outline="true"
+            >
+              <h2 style={{ color: 'black' }}>Download Resume</h2>
+            </button>
+          </a>
         </div>
         <div
           data-aos="fade-up"

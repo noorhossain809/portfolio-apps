@@ -45,7 +45,6 @@ const ProjectsAll = ({
   title = 'Project title',
   description = 'Lorem Ipsum is simply dummy text of the printing and typesettingindustry.',
   link = 'GitHub',
-  preview = 'https://doctors-portal-c5857.web.app/',
 }) => (
   <ProjectItemStyles>
     <Link to="/projects" className="projectsAll-item">
@@ -56,7 +55,6 @@ const ProjectsAll = ({
         <h3 className="project-title">{title}</h3>
       </Link>
       <p className="projectItem-desc">{description}</p>
-      <Link to="">{preview}</Link>
     </div>
   </ProjectItemStyles>
 );

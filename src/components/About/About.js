@@ -123,9 +123,23 @@ const About = () => (
           <h1 className="about-info-heading">My Skills</h1>
           <AboutInfo
             title="FrontEnd"
-            items={['HTML', 'CSS', 'Javascript', 'React']}
+            items={[
+              'HTML',
+              'CSS',
+              'Javascript',
+              'Typescript',
+              'React',
+              'Redux',
+              'Material ui',
+              'React Bootstrap',
+              'Firebase',
+              'React Router',
+            ]}
           />
-          <AboutInfo title="BackEnd" items={['Node.js', 'MongoDB']} />
+          <AboutInfo
+            title="BackEnd"
+            items={['Node.js', 'Express.js', 'MongoDB', 'Heroku']}
+          />
         </div>
         <div className="about-info-item">
           <h1 className="about-info-heading">Experience</h1>
