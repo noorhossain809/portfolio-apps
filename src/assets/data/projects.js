@@ -5,6 +5,7 @@ import freshValley from '../images/fresh-valley.png';
 import urbanRides from '../images/urban-riders.png';
 import fvalley from '../images/fValley.png';
 import travels from '../images/travel.png';
+import chronicle from '../images/chronicle.png';
 
 const projects = [
   {
@@ -26,6 +27,15 @@ const projects = [
   },
   {
     id: uuidv4(),
+    name: 'My-Chronicle',
+    desc:
+      'A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.',
+    img: chronicle,
+    link: 'https://github.com/noorhossain809',
+    preview: 'https://my-chronicle-498b6.web.app/',
+  },
+  {
+    id: uuidv4(),
     name: 'Urban Riders',
     desc:
       'Using this app you can track any e coin. Also you will get a good advise about investment form the professional',
@@ -35,18 +45,18 @@ const projects = [
   },
   {
     id: uuidv4(),
-    name: 'Travels',
-    desc:
-      'A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.',
-    img: travels,
-    link: 'https://github.com/noorhossain809',
-  },
-  {
-    id: uuidv4(),
     name: 'fvalley',
     desc:
       'A tracking website that will show the performance of the website. Also you will get some useful advice to improve the performance.',
     img: fvalley,
+    link: 'https://github.com/noorhossain809',
+  },
+  {
+    id: uuidv4(),
+    name: 'Travels',
+    desc:
+      'A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.',
+    img: travels,
     link: 'https://github.com/noorhossain809',
   },
 ];
