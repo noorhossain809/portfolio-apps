@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -44,25 +45,24 @@ const ProjectSectionStyles = styled.div`
   .swiper-button-next::after {
     font-size: 2rem;
   }
-  .font-icons {
-    font-size: 3.4rem;
-    padding: 10px;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
+  .project-info-div {
+    display: flex;
+    gap: 10px;
   }
 
-  .font-icons a {
-    padding: 5px;
-  }
-  .font-icons button {
+  .project-info-div button {
     background-color: var(--black);
     border: 2px solid var(--gray-1);
-    padding: 8px;
-    border-radius: 15px;
+    padding: 4px 10px 4px 10px;
+    border-radius: 10px;
     cursor: pointer;
     background-color: var(--deep-dark);
   }
+  .project-info-div button a {
+    font-size: 16px;
+    color: white;
+  }
+
   @media only screen and (max-width: 768px) {
     .projects-all-items {
       flex-direction: column;
@@ -115,17 +115,20 @@ const ProjectSection = () => (
                   description={project.desc}
                   link={project.link}
                 />
-                <div className="font-icons p-3">
+                <div className="project-info-div p-3">
                   {/* <Link to={project.preview}>
                     <button type="button">preview</button>
                   </Link> */}
                   <button type="button">
                     <a href={project.preview}>preview</a>
                   </button>
-                  <a href={project.link}>
+                  <a href={project.link} style={{ fontSize: '30px' }}>
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
-                  <a href="https://www.linkedin.com/feed/">
+                  <a
+                    href="https://www.linkedin.com/in/noor-hossain-172175211/"
+                    style={{ fontSize: '30px' }}
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </div>

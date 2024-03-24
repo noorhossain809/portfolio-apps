@@ -11,12 +11,14 @@ const AboutInfoStyles = styled.div`
   margin-top: 3rem;
   .title {
     font-size: 2.4rem;
+    margin-top: 10px;
   }
   .items {
     display: flex;
     position: absolute;
     gap: 1.5rem;
     left: 18rem;
+    margin-top: 10px;
   }
   .item {
     background-color: var(--deep-dark);

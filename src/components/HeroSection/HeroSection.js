@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import AOS from 'aos';
 import heroImg from '../../assets/images/hero2.jpg';
+import hero from '../../assets/images/hero.png';
 import Button from '../Button/Button';
 import PText from './PText';
 import socialMedia from '../../assets/images/social-media-arrow.svg';
@@ -20,7 +21,9 @@ const HeroStyle = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    background: var(--dark-bg);
   }
+  
   .hero-heading {
     font-size: 2rem;
     margin-bottom: -4rem;
@@ -30,12 +33,23 @@ const HeroStyle = styled.div`
       display: inline-block;
       width: 100%;
     }
-    .hero-name {
-      font-size: 7rem;
-      font-family: 'Montserrat SemiBold';
-      color: var(--white);
-      
+    .hero-title{
+      position: absolute;
+       top: -60px; /* Adjust as needed */
+      left: 50%;
+      transform: translateX(-50%);
     }
+    .hero-name {
+  font-size: 7rem;
+  font-family: 'Montserrat SemiBold';
+  color: var(--white);
+  position: absolute;
+  top: -45px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+   z-index: 1
+}
+
   }
   .head{
     /* animation: moveheading 1.5s linear 1;
@@ -54,16 +68,21 @@ const HeroStyle = styled.div`
     }
   } */
   .hero-img {
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
-    height: 500px;
+    height: 600px;
     margin: 0 auto;
-  
+    z-index: -1
+    
     border: 2px solid var(--gray-1);
     /* animation: movezoom 1.5s linear 1;
     animation-delay: 4s;
     visibility: hidden;
     animation-fill-mode: forwards; */
+
+    img{
+        opacity: 0.5
+    }
     
   }
   /* @keyframes movezoom {
@@ -78,7 +97,7 @@ const HeroStyle = styled.div`
     }
   } */
   .hero-info {
-    margin-top: -16rem;
+    margin-top: -18rem;
     animation: moveinfo 1.5s linear 1;
     animation-delay: 1s;
     visibility: hidden;
@@ -192,6 +211,7 @@ const HeroStyle = styled.div`
       margin-bottom: -3rem;
       .hero-name {
         font-size: 4.5rem;
+        top: -30px
       }
     }
     .hero-img {
@@ -247,7 +267,7 @@ const HeroSection = () => (
           className="head"
         >
           <h1 className="hero-heading">
-            <span>Hello, This is </span>
+            <span className="hero-title">Hello, This is </span>
             <span className="hero-name">Noor Hossain</span>
           </h1>
         </div>
@@ -255,9 +275,10 @@ const HeroSection = () => (
           data-aos="zoom-in-down"
           data-aos-offset="200"
           data-aos-duration="1000"
-          className="hero-img"
         >
-          <img src={heroImg} alt="" />
+          <div className="hero-img">
+            <img src={heroImg} alt="" />
+          </div>
         </div>
         <div className="hero-info">
           <div className="hero-para">
@@ -287,11 +308,10 @@ const HeroSection = () => (
                 margin: '10px',
                 cursor: 'pointer',
                 color: 'black',
-                border: 'none',
                 width: '250px',
+                border: '2px solid gray',
               }}
               type="button"
-              outline="true"
             >
               <h2 style={{ color: 'black' }}>Download Resume</h2>
             </button>
@@ -310,13 +330,17 @@ const HeroSection = () => (
           <div className="social-media">
             <ul>
               <li>
-                <a href="https://www.facebook.com/">FB</a>
+                <a href="https://www.facebook.com/noor.hosain.3745?mibextid=ZbWKwL">
+                  FB
+                </a>
               </li>
               <li>
-                <a href="https://twitter.com/home">TW</a>
+                <a href="https://twitter.com/NoorHos89857851">TW</a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/feed/">LI</a>
+                <a href="https://www.linkedin.com/in/noor-hossain-172175211/">
+                  LI
+                </a>
               </li>
             </ul>
           </div>

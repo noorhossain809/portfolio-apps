@@ -24,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
   }
   a{
     text-decoration: none;
+    color: var(--gray-1)
   }
   img, svg{
     width: 100%;

@@ -8,6 +8,7 @@ import ContactBanner from '../ContactBanner/ContactBanner';
 
 const AboutStyles = styled.div`
   padding: 20rem 0 10rem 0;
+  background: var(--dark-bg);
   .top-section {
     display: flex;
     align-items: center;

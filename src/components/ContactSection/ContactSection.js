@@ -6,7 +6,8 @@ import ContactForm from '../ContactForm/ContactForm';
 import ContactInfoItem from '../ContactInfoItem/ContactInfoItem';
 
 const ContactSectionStyles = styled.div`
-  padding: 10rem 0;
+  padding: 20rem 0 10rem 0;
+  background: var(--dark-bg);
   .contact-wrapper {
     display: flex;
     gap: 5rem;

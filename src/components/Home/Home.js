@@ -8,7 +8,7 @@ import ServiceSection from '../ServiceSection/ServiceSection';
 import Testimonial from '../Testmonial/Testimonial';
 
 const Home = () => (
-  <div>
+  <div style={{ background: '#262626' }}>
     <HeroSection />
     <AboutSection />
     <ServiceSection />

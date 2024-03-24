@@ -8,13 +8,14 @@ import projectImg from '../../assets/images/projectImg.png';
 const ProjectItemStyles = styled.div`
   .projectsAll-item {
     width: 100%;
-    height: 400px;
+    height: 650px;
     overflow: hidden;
     display: inline-block;
     border: 3px solid var(--gray-2);
     border-radius: 12px;
     img {
       height: 100%;
+      width: 100%;
     }
   }
 

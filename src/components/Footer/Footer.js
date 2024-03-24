@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import PText from '../HeroSection/PText';
@@ -25,11 +25,10 @@ const FooterStyles = styled.div`
   }
   .copy-right {
     background-color: var(--dark-bg);
-    text-align: left;
+    text-align: center;
     padding: 1rem 0;
     margin-top: 5rem;
     .para {
-      margin-left: 0;
       font-size: 1.4rem;
     }
   }
@@ -54,89 +53,99 @@ const FooterStyles = styled.div`
   }
 `;
 
-const Footer = () => (
-  <FooterStyles>
-    <div className="container">
-      <div className="footer-col-1">
-        <h1 className="footer-title">Noor Hossain</h1>
-        <PText>
-          A web designer and developer from Chittagong, Bangladesh. I always
-          make websites that have unique designs and also has a good performance
-          rate.
-        </PText>
-      </div>
-      <div className="footer-col-2">
-        <FooterCol
-          heading="Important Links"
-          links={[
-            {
-              type: 'Link',
-              title: 'Home',
-              path: '/',
-            },
-            {
-              type: 'Link',
-              title: 'About',
-              path: '/about',
-            },
-            {
-              type: 'Link',
-              title: 'Projects',
-              path: '/project',
-            },
-            {
-              type: 'Link',
-              title: 'Contact',
-              path: '/contact',
-            },
-          ]}
-        />
-      </div>
-      <div className="footer-col-3">
-        <FooterCol
-          heading="Contact Info"
-          links={[
-            {
-              title: '+88018112233',
-              path: 'tel:+88012312',
-            },
-            {
-              title: 'noorsan809@gmail.com',
-              path: 'mailto:webcifar@gmail.com',
-            },
-            {
-              title: 'Halishahar, Chittagong, Bangladesh',
-              path: 'http://google.com/maps',
-            },
-          ]}
-        />
-      </div>
-      <div className="footer-col-4">
-        <FooterCol
-          heading="Social Links"
-          links={[
-            {
-              title: 'Facebook',
-              path: 'http://facebook.com',
-            },
-            {
-              title: 'Twitter',
-              path: 'http://twitter.com',
-            },
-            {
-              title: 'Instagram',
-              path: 'http://instagram.com',
-            },
-          ]}
-        />
-      </div>
-    </div>
-    <div className="copy-right">
+const Footer = () => {
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    // Update the current year when the component mounts
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+  return (
+    <FooterStyles>
       <div className="container">
-        <PText>© 2021 - Noor Hossain | Designed By web developer</PText>
+        <div className="footer-col-1">
+          <h1 className="footer-title">Noor Hossain</h1>
+          <PText>
+            A web designer and developer from Chittagong, Bangladesh. I always
+            make websites that have unique designs and also has a good
+            performance rate.
+          </PText>
+        </div>
+        <div className="footer-col-2">
+          <FooterCol
+            heading="Important Links"
+            links={[
+              {
+                type: 'Link',
+                title: 'Home',
+                path: '/',
+              },
+              {
+                type: 'Link',
+                title: 'About',
+                path: '/about',
+              },
+              {
+                type: 'Link',
+                title: 'Projects',
+                path: '/project',
+              },
+              {
+                type: 'Link',
+                title: 'Contact',
+                path: '/contact',
+              },
+            ]}
+          />
+        </div>
+        <div className="footer-col-3">
+          <FooterCol
+            heading="Contact Info"
+            links={[
+              {
+                title: '+8801634835317',
+                path: 'tel:+8801634835317',
+              },
+              {
+                title: 'noorsan809@gmail.com',
+                path: 'mailto:noorsan809@gmail.com',
+              },
+              {
+                title: 'Halishahar, Chittagong, Bangladesh',
+                path: 'https://maps.app.goo.gl/61Rn3EXncZTruE7Y8',
+              },
+            ]}
+          />
+        </div>
+        <div className="footer-col-4">
+          <FooterCol
+            heading="Social Links"
+            links={[
+              {
+                title: 'Facebook',
+                path:
+                  'https://www.facebook.com/noor.hosain.3745?mibextid=ZbWKwL',
+              },
+              {
+                title: 'Twitter',
+                path: 'https://twitter.com/NoorHos89857851',
+              },
+              {
+                title: 'Instagram',
+                path:
+                  'https://www.instagram.com/noor.hosain.3745?igsh=NjBxdnFlcW1pNDBw',
+              },
+            ]}
+          />
+        </div>
       </div>
-    </div>
-  </FooterStyles>
-);
+      <div className="copy-right">
+        <div className="container">
+          <PText>© 2021 - {currentYear} | Noor Hossain, Designed by me</PText>
+        </div>
+      </div>
+    </FooterStyles>
+  );
+};
 
 export default Footer;

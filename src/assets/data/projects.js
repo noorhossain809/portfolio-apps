@@ -1,8 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
 import ProjectImg from '../images/projectImg.png';
-import doctors from '../images/doctors.png';
+import doctors from '../images/prety-smile.png';
+import parlur from '../images/parler-gallery-landing-page.png';
 import freshValley from '../images/fresh-valley.png';
-import urbanRides from '../images/urban-riders.png';
+import bloodDonate from '../images/boold-donate.png';
 import fvalley from '../images/fValley.png';
 import travels from '../images/travel.png';
 import chronicle from '../images/chronicle.png';
@@ -19,12 +20,22 @@ const projects = [
   },
   {
     id: uuidv4(),
-    name: 'Fresh Valley',
+    name: 'Jarins-parlur',
     desc:
       'An app to help people to get an overview of how they can make the city beautiful.',
-    img: freshValley,
-    link: 'https://github.com/noorhossain809/fresh-valley',
+    img: parlur,
+    link: 'https://github.com/noorhossain809/jerins-purler',
+    preview: `https://jerins-purler.vercel.app/`,
   },
+  {
+    id: uuidv4(),
+    name: 'Travels',
+    desc:
+      'A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.',
+    img: travels,
+    link: 'https://github.com/noorhossain809',
+  },
+
   {
     id: uuidv4(),
     name: 'My-Chronicle',
@@ -36,12 +47,12 @@ const projects = [
   },
   {
     id: uuidv4(),
-    name: 'Urban Riders',
+    name: 'blood-donation',
     desc:
-      'Using this app you can track any e coin. Also you will get a good advise about investment form the professional',
-    img: urbanRides,
-    link: 'https://github.com/noorhossain809/urban-riders',
-    preview: 'https://urban-riders-336311.web.app/',
+      'Blood donation saves lives by providing vital transfusions for surgeries, emergencies, ensuring community health and safety.',
+    img: bloodDonate,
+    link: 'https://github.com/noorhossain809/blood-donate-client',
+    preview: 'https://blood-donation-xi.vercel.app/',
   },
   {
     id: uuidv4(),
@@ -53,11 +64,11 @@ const projects = [
   },
   {
     id: uuidv4(),
-    name: 'Travels',
+    name: 'Fresh Valley',
     desc:
-      'A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.',
-    img: travels,
-    link: 'https://github.com/noorhossain809',
+      'An app to help people to get an overview of how they can make the city beautiful.',
+    img: freshValley,
+    link: 'https://github.com/noorhossain809/fresh-valley',
   },
 ];
 

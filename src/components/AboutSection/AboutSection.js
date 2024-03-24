@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Button from '../Button/Button';
 import PText from '../HeroSection/PText';
 import SectionTitle from './SectionTitle';
-import aboutImg from '../../assets/images/about-sec-img.png';
+import aboutImg from '../../assets/images/hero1.jpg';
 
 const AboutSectionStyle = styled.div`
   padding: 10rem 0;
@@ -34,6 +34,14 @@ const AboutSectionStyle = styled.div`
       visibility: visible;
     }
   } */
+
+  .section-right img {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 120px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 20px;
+    opacity: 0.7;
+  }
   .section-right {
     /* animation: moveright 1s linear 1;
     animation-delay: 7s;
@@ -70,6 +78,12 @@ const AboutSectionStyle = styled.div`
     }
     .section-right {
       flex: 3;
+      img {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 10px;
+      }
     }
   }
 
@@ -84,6 +98,12 @@ const AboutSectionStyle = styled.div`
     }
     .section-right {
       margin-top: 3rem;
+      img {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 60px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 10px;
+      }
     }
     .section-title {
       text-align: center;

@@ -7,6 +7,7 @@ import ProjectInfo from '../../assets/data/projects';
 
 const ProjetStyles = styled.div`
   padding: 10rem 0;
+  background: var(--dark-bg);
   .projects-all-items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
