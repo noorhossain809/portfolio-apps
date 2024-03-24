@@ -7,7 +7,6 @@ import ContactInfoItem from '../ContactInfoItem/ContactInfoItem';
 
 const ContactSectionStyles = styled.div`
   padding: 20rem 0 10rem 0;
-  background: var(--dark-bg);
   .contact-wrapper {
     display: flex;
     gap: 5rem;
@@ -21,17 +20,16 @@ const ContactSectionStyles = styled.div`
     width: 2px;
     height: 50%;
     background-color: var(--gray-1);
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .left {
     width: 100%;
-    max-width: 500px;
+    margin-top: 1.5rem;
   }
   .right {
     width: 100%;
-    max-width: 500px;
   }
   @media only screen and (max-width: 768px) {
     .contact-wrapper {
@@ -41,6 +39,9 @@ const ContactSectionStyles = styled.div`
       width: 100%;
       height: 2px;
       top: 40%;
+      right: 10px;
+      left: 10px;
+      transform: translate(-58%, -50%);
     }
     .left,
     .right {

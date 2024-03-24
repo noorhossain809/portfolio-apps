@@ -4,8 +4,8 @@ import ContactSection from '../ContactSection/ContactSection';
 import Map from '../Map/Map';
 
 const Contact = () => (
-  <div>
-    <div className="container">
+  <div style={{ background: 'var(--dark-bg)' }}>
+    <div className="container" style={{ paddingBottom: '5rem' }}>
       <ContactSection />
       <Map />
     </div>
