@@ -5,6 +5,7 @@ import PText from '../HeroSection/PText';
 import aboutImg from '../../assets/images/hero1.jpg';
 import AboutInfo from '../AboutInfo/AboutInfo';
 import ContactBanner from '../ContactBanner/ContactBanner';
+import FrontendSkillSection from '../frontend/FrontendSkillSection';
 
 const AboutStyles = styled.div`
   padding: 20rem 0 10rem 0;
@@ -54,6 +55,12 @@ const AboutStyles = styled.div`
   .about-info-item {
     margin-bottom: 8rem;
   }
+
+  .frontend-info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
   .about-info-heading {
     font-size: 3.6rem;
     text-transform: uppercase;
@@ -72,6 +79,12 @@ const AboutStyles = styled.div`
     }
     .about-info-heading {
       font-size: 3rem;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .top-section {
+      flex-direction: column;
+      gap: 3rem;
     }
   }
 `;
@@ -122,30 +135,45 @@ const About = () => (
         </div>
         <div className="about-info-item">
           <h1 className="about-info-heading">My Skills</h1>
-          <AboutInfo
-            title="FrontEnd"
-            items={[
-              'HTML',
-              'CSS',
-              'Javascript',
-              'Typescript',
-              'React',
-              'Redux',
-              'Material ui',
-              'React Bootstrap',
-              'Firebase',
-              'React Router',
-            ]}
-          />
+          <div className="frontend-info">
+            <FrontendSkillSection
+              title="FrontEnd"
+              items={[
+                'HTML',
+                'CSS',
+                'Javascript',
+                'Typescript',
+                'React',
+                'NextJS',
+                'Redux',
+                'ReactRouter',
+                'MaterialUI',
+                'TailwindCSS',
+                'daisyUI',
+                'ReactBootstrap',
+              ]}
+            />
+          </div>
           <AboutInfo
             title="BackEnd"
-            items={['Node.js', 'Express.js', 'MongoDB', 'Heroku']}
+            items={[
+              'Node.js',
+              'Express.js',
+              'MongoDB',
+              'Mongoose',
+              'Prisma',
+              'PostgreSQL',
+              'Heroku',
+            ]}
           />
         </div>
         <div className="about-info-item">
           <h1 className="about-info-heading">Experience</h1>
           <AboutInfo title="2020-2021" items={['Junior web developer']} />
-          <AboutInfo title="2021-2021" items={['Frontend web developer']} />
+          <AboutInfo
+            title="2022-2024"
+            items={['Frontend developer at Upwork']}
+          />
           <AboutInfo title="2021-2021" items={['Backend web developer']} />
         </div>
       </div>

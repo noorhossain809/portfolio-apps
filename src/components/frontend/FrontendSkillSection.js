@@ -2,22 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import PText from '../HeroSection/PText';
 
-const AboutInfoStyles = styled.div`
+const FrontendInfoStyles = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  /* gap: 3rem; */
-  position: relative;
   margin-top: 3rem;
+  gap: 60px;
   .title {
     font-size: 2.4rem;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .items {
-    display: flex;
-    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
     gap: 1.5rem;
-    left: 18rem;
     margin-top: 10px;
   }
   .item {
@@ -25,21 +21,24 @@ const AboutInfoStyles = styled.div`
     padding: 1rem;
     border-radius: 8px;
     font-size: 14px;
+    text-align: center;
   }
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
     .items {
+      display: flex;
       flex-direction: column;
       position: initial;
       gap: 1rem;
       font-size: 14px;
     }
     .item {
+      text-align: start;
     }
     .title {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
   @media only screen and (max-width: 900px) {
@@ -60,8 +59,8 @@ const AboutInfoStyles = styled.div`
   }
 `;
 
-const AboutInfo = ({ title = 'Title', items = ['HTML', 'CSS'] }) => (
-  <AboutInfoStyles>
+const FrontendSkillSection = ({ title = 'Title', items = [''] }) => (
+  <FrontendInfoStyles>
     <h1 className="title">{title}</h1>
     <div className="items">
       {items.map((item, index) => (
@@ -70,7 +69,7 @@ const AboutInfo = ({ title = 'Title', items = ['HTML', 'CSS'] }) => (
         </div>
       ))}
     </div>
-  </AboutInfoStyles>
+  </FrontendInfoStyles>
 );
 
-export default AboutInfo;
+export default FrontendSkillSection;

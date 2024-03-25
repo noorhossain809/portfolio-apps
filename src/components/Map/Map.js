@@ -7,14 +7,14 @@ const MapStyles = styled.div`
   background: url(${mapImg}) no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 400px;
+  min-height: 450px;
   .container {
     position: relative;
     min-height: 400px;
   }
   .map-card {
     right: 10%;
-    bottom: 10%;
+    bottom: 2px;
     background: var(--deep-dark);
     position: absolute;
     padding: 2rem;
