@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
@@ -52,9 +53,9 @@ const ContactForm = () => {
 
   const form = useRef();
 
-  const sendEmail = (event) => {
-    event.preventDefault();
-    console.log('submit', event);
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log('submit', e);
 
     emailjs
       .sendForm('service_0i9u80y', 'template_s2sr759', form.current, {
@@ -110,7 +111,7 @@ const ContactForm = () => {
               />
             </label>
           </div>
-          <button type="submit">Send</button>
+          <input type="submit" value="Submit" />
         </form>
       </FormStyles>
     </div>
